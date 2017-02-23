@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
 
-        $this->call(TagsTableSeeder::class);
+        // $this->call(TagsTableSeeder::class);
 
         // $this->call(SellersTableSeeder::class);  // se crean con las direcciones
 
@@ -24,25 +24,25 @@ class DatabaseSeeder extends Seeder
 
     	// $this->call(ProductsTableSeeder::class);
 
-    	$this->call(ReviewsTableSeeder::class);
+    	// $this->call(ReviewsTableSeeder::class);
 
-        $products = Product::all();
+        // $products = Product::all();
 
-        $tags = Tag::all();
+        // $tags = Tag::all();
 
-        $count = 1;
+        // $count = 1;
 
-        foreach ($products as $product) {
-            $product->tags()->attach($tags[$count]);
-            $count++;
-        }
+        // foreach ($products as $product) {
+        //     $product->tags()->attach($tags[$count]);
+        //     $count++;
+        // }
         
-        $products = Product::all();
+        // $products = Product::all();
 
-        foreach ($products as $product) {
-            $product->tags()->attach($tags[$count]);
-            $count++;
-        }
+        // foreach ($products as $product) {
+        //     $product->tags()->attach($tags[$count]);
+        //     $count++;
+        // }
 
     }
 }
